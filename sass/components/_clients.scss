@@ -1,0 +1,43 @@
+@import '../utils/variables';
+
+.clients {
+  &__container {
+    text-align: center;
+  }
+
+  &__list {
+    display: flex;
+    gap: 30px;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 170px;
+    height: 92px;
+
+    border: 1px solid $social-icons-color; //var(--social-icons-color);
+    border-radius: 4px;
+
+    transition: var(--transition);
+    transition-property: border;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    border: 1px solid $accent-color; //var(--accent-color);
+  }
+
+  &__link:hover &__icon,
+  &__link:focus &__icon {
+    fill: $accent-color; //var(--accent-color);
+  }
+
+  &__icon {
+    fill: $social-icons-color; //var(--social-icons-color);
+    transition: $transition; // var(--transition);
+    transition-property: fill;
+  }
+}

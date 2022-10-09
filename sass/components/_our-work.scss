@@ -1,0 +1,39 @@
+@import '../utils/variables';
+
+.our-work {
+  text-align: center;
+
+  &__section {
+    padding-top: 47px;
+  }
+
+  &__list {
+    display: flex;
+    gap: 30px;
+  }
+
+  &__item {
+    flex-basis: calc((100% - 2 * 30px) / 3);
+    position: relative;
+  }
+
+  &__desc {
+    position: absolute;
+    bottom: 0;
+
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.143;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $main-white-color; //var(--main-white-color);
+
+    background-color: rgba(47, 48, 58, 0.8);
+  }
+}

@@ -1,0 +1,25 @@
+@use 'utils/variables';
+@use 'utils/hidden-prop';
+@use 'utils/init';
+@use 'utils/utils';
+@use 'components/logo';
+@use 'components/header';
+@use 'components/header__nav';
+@use 'components/header__contacts';
+@use 'components/hero';
+@use 'components/order-button';
+@use 'components/advantage';
+@use 'components/our-work';
+@use 'components/our-team';
+@use 'components/social-list';
+@use 'components/clients';
+@use 'components/footer';
+@use 'components/subscribe-form';
+
+@use 'components/backdrop';
+@use 'components/order-window';
+@use 'components/order-form';
+
+@use 'components/filter';
+@use 'components/work-list';
+@use 'components/card';

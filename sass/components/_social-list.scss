@@ -1,0 +1,46 @@
+@import '../utils/variables';
+
+.social-list {
+  display: flex;
+  gap: 10px;
+  margin: 0 auto;
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+
+    border-radius: 50%;
+
+    transition: $transition; //var(--transition);
+    transition-property: background-color;
+  }
+
+  &__link--light {
+    color: $social-icons-color;
+  }
+
+  &__link--dark {
+    color: $main-white-color;
+    background-color: $footer-social-background;
+  }
+
+  &__icon {
+    fill: currentColor; // $social-icons-color; //var(--social-icons-color);
+    transition: $transition; //var(--transition);
+    transition-property: fill;
+  }
+
+  &__link--light:hover,
+  &__link--light:focus {
+    color: $main-background-color;
+    background-color: $accent-color; //var(--accent-color);
+  }
+  &__link--dark:hover,
+  &__link--dark:focus {
+    color: $main-white-color;
+    background-color: $accent-color; //var(--accent-color);
+  }
+}

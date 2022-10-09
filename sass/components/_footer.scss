@@ -1,0 +1,71 @@
+@import '../utils/variables';
+
+.footer {
+  background-color: $footer-background-color;
+
+  &__section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  &__container {
+    display: flex;
+    align-items: baseline;
+  }
+
+  &__logo {
+    display: inline-block;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 20px;
+
+    color: $main-white-color;
+  }
+
+  &__item {
+    line-height: 1.5;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 9px;
+  }
+  &__link {
+    color: $footer-contact-color;
+
+    font-style: normal;
+
+    transition: $transition;
+    transition-property: color;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: $accent-color;
+  }
+  &__link--location {
+    font-size: 14px;
+    color: $main-white-color;
+
+    font-style: normal;
+  }
+
+  &__social-wrap {
+    margin-left: auto;
+  }
+
+  &__join-title {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.1428;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $main-white-color;
+    margin-bottom: 20px;
+  }
+
+  &__form-wrap {
+    margin-left: 93px;
+  }
+}

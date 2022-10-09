@@ -1,0 +1,16 @@
+@import '../utils/variables';
+
+.logo {
+  padding-top: 24px;
+  padding-bottom: 25px;
+
+  font-family: $secondary-font-family;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.1925; //30.52/26 = 1.17, но тогда размер блока не равен 80px
+  color: $title-color; //var(--title-color);
+
+  &__accent {
+    color: $accent-color; // var(--accent-color);
+  }
+}

@@ -1,0 +1,83 @@
+@import '../utils/variables';
+
+.subscribe-form {
+  width: 570px;
+  height: 86px;
+
+  position: relative;
+
+  &__label {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: $main-white-color;
+  }
+
+  &__input {
+    width: 358px;
+    padding: 14px 16px;
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    font-size: 16px;
+    line-height: 1.25;
+
+    background-color: transparent;
+    color: $main-white-color;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    border-radius: 4px;
+
+    transition: $transition;
+    transition-property: color, border;
+  }
+
+  &__input:focus {
+    color: $main-white-color;
+    outline: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border: 1px solid $accent-color;
+  }
+
+  &__btn-subscribe {
+    width: 200px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.875;
+    letter-spacing: 0.06em;
+    color: $main-white-color;
+    background-color: $accent-color;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+    transition: $transition;
+    transition-property: background-color, box-shadow;
+  }
+
+  &__btn-subscribe:hover,
+  &__btn-subscribe:focus {
+    background-color: $button-focused;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+
+  &__icon-send {
+    fill: currentColor;
+  }
+}
