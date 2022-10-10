@@ -10,7 +10,22 @@
 
   &__container {
     display: flex;
-    align-items: baseline;
+    flex-direction: column;
+    gap: 60px;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (min-width: $tablet) {
+      flex-direction: row;
+    }
+    @media screen and (min-width: $tablet) and (max-width: ($desktop - 1px)) {
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    @media screen and (min-width: $desktop) {
+      align-items: baseline;
+    }
   }
 
   &__logo {
@@ -50,7 +65,9 @@
   }
 
   &__social-wrap {
-    margin-left: auto;
+    @media screen and (min-width: $desktop) {
+      margin-left: auto;
+    }
   }
 
   &__join-title {
@@ -63,9 +80,17 @@
     text-transform: uppercase;
     color: $main-white-color;
     margin-bottom: 20px;
+    text-align: center;
   }
 
   &__form-wrap {
-    margin-left: 93px;
+    @media screen and (min-width: $desktop) {
+      margin-left: auto;
+    }
+    //margin-left: 93px;
   }
+}
+
+.address-wrap {
+  text-align: center;
 }

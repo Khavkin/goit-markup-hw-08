@@ -1,9 +1,12 @@
 @import 'variables';
+@import 'mixins';
 
 body {
   font-family: $main-font-family;
-  font-size: 14px;
-  line-height: 1.71;
+  @include font(14px, 400, 1.71);
+
+  // font-size: 14px;
+  // line-height: 1.71;
   letter-spacing: 0.03em;
 
   color: $main-text-color; //var(--main-text-color);
@@ -37,15 +40,27 @@ ul {
 }
 
 .container {
-  width: 1200px;
+  //width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
+
+  // @media screen and (min-width: 480px) {
+  width: 480px;
+  // }
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
 }
 
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
+
+  min-width: 480px;
 }
 
 .list {
@@ -56,9 +71,13 @@ ul {
 
 .title {
   margin-top: 0;
-  margin-bottom: 50px;
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 1.167;
+  @include font(28px, 700, 1.17);
+  margin-bottom: 30px;
+
+  // margin-bottom: 50px;
+  // @include font(36px, 700, 1.167);
+  // font-size: 36px;
+  // font-weight: 700;
+  // line-height: 1.167;
   color: $title-color; //var(--title-color);
 }

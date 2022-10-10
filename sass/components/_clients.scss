@@ -7,7 +7,22 @@
 
   &__list {
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 30px;
+  }
+
+  &__item {
+    flex-basis: calc((100% - 2 * 30px) / 2);
+
+    @media screen and (min-width: $tablet) {
+      flex-basis: calc((100% - 3 * 30px) / 3);
+    }
+
+    @media screen and (min-width: $desktop) {
+      flex-wrap: nowrap;
+      flex-basis: calc((100% - 5 * 30px) / 6);
+    }
   }
 
   &__link {
@@ -15,7 +30,7 @@
     align-items: center;
     justify-content: center;
 
-    width: 170px;
+    // width: 170px;
     height: 92px;
 
     border: 1px solid $social-icons-color; //var(--social-icons-color);

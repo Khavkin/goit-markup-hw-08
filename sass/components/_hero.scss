@@ -1,4 +1,5 @@
 @import '../utils/variables';
+@import '../utils/mixins';
 
 .hero {
   background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
@@ -16,13 +17,16 @@
   }
 
   &__title {
-    max-width: 696px;
+    max-width: 360px;
+    //max-width: 696px;
     margin-bottom: 30px;
     margin-left: auto;
     margin-right: auto;
-    font-size: 44px;
-    font-weight: 900;
-    line-height: 1.3637;
+    @include font(26px, 900, 1.62);
+    //@include font(44px, 900, 1.3637); desktop
+    // font-size: 44px;
+    // font-weight: 900;
+    // line-height: 1.3637;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: $main-white-color; //var(--main-white-color);

@@ -1,10 +1,25 @@
 @import '../utils/variables';
 
 .subscribe-form {
-  width: 570px;
-  height: 86px;
+  //width: 570px;
+  // height: 86px;
 
-  position: relative;
+  // text-align: center;
+
+  // position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (min-width: $desktop) {
+    width: 570px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: flex-start;
+  }
 
   &__label {
     font-weight: 700;
@@ -14,15 +29,19 @@
     text-transform: uppercase;
 
     color: $main-white-color;
+
+    // @media screen and (min-width: $desktop) {
+    //   align-self: flex-start;
+    // }
   }
 
   &__input {
     width: 358px;
     padding: 14px 16px;
 
-    position: absolute;
-    left: 0;
-    bottom: 0;
+    //position: absolute;
+    //left: 0;
+    //bottom: 0;
 
     font-size: 16px;
     line-height: 1.25;
@@ -53,9 +72,9 @@
     justify-content: center;
     gap: 10px;
 
-    position: absolute;
-    right: 0;
-    bottom: 0;
+    // position: absolute;
+    //right: 0;
+    // bottom: 0;
 
     font-weight: 700;
     font-size: 16px;
