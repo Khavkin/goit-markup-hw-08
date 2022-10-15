@@ -24,12 +24,17 @@
     <header class="header">
       <div class="container header__container">
         <a class="logo link" href="./index.html"><span class="logo__accent">Web</span>Studio</a>
-        <button class="menu-button js-open-menu" type="button">
-          <svg class="menu-icon" width="24" height="16">
+        <button
+          class="menu-button js-open-menu"
+          type="button"
+          aria-expanded="false"
+          aria-controls="menu-container"
+        >
+          <svg class="menu-icon" width="24" height="16" aria-label="Переключатель мобильного меню">
             <use href="images/icons.svg#icon-menu"></use>
           </svg>
         </button>
-        <div class="menu-container js-menu-container">
+        <div class="menu-container js-menu-container" id="menu-container">
           <button class="btn-close-menu js-close-menu" type="button">
             <svg class="menu-icon" width="19" height="19">
               <use href="images/icons.svg#icon-close-menu"></use>
@@ -53,7 +58,7 @@
           <ul class="header__contacts">
             <li>
               <a class="header__contacts-link link" href="mailto:info@devstudio.com">
-                <svg class="header__contacts-icon" width="16" height="12">
+                <svg class="header__contacts-icon envelope-icon" width="14" height="10">
                   <use href="./images/icons.svg#icon-envelope"></use>
                 </svg>
                 info@devstudio.com</a
@@ -61,49 +66,25 @@
             </li>
             <li>
               <a class="header__contacts-link link" href="tel:+380961111111">
-                <svg class="header__contacts-icon" width="10" height="16">
+                <svg class="header__contacts-icon mobile-icon" width="10" height="14">
                   <use href="./images/icons.svg#icon-smartphone"></use>
                 </svg>
                 +38 096 111 11 11</a
               >
             </li>
           </ul>
-          <ul class="social-list social-list--light header__social-list">
-            <li>
-              <a
-                class="social-list__link link social-list__link--light"
-                href=""
-                aria-label="instagram"
-              >
-                instagram
-              </a>
+          <ul class="header__social list">
+            <li class="header__social-item">
+              <a class="header__social-link link" href="" aria-label="instagram"> instagram </a>
             </li>
-            <li>
-              <a
-                class="social-list__link link social-list__link--light"
-                href=""
-                aria-label="Twitter"
-              >
-                Twitter
-              </a>
+            <li class="header__social-item">
+              <a class="header__social-link link" href="" aria-label="Twitter"> Twitter </a>
             </li>
-            <li>
-              <a
-                class="social-list__link link social-list__link--light"
-                href=""
-                aria-label="Facebook"
-              >
-                Facebook
-              </a>
+            <li class="header__social-item">
+              <a class="header__social-link link" href="" aria-label="Facebook"> Facebook </a>
             </li>
-            <li>
-              <a
-                class="social-list__link link social-list__link--light"
-                href=""
-                aria-label="Linkedin"
-              >
-                Linkedin
-              </a>
+            <li class="header__social-item">
+              <a class="header__social-link link" href="" aria-label="Linkedin"> Linkedin </a>
             </li>
           </ul>
         </div>
@@ -172,15 +153,33 @@
           <h2 class="title our-work__title">Чим ми займаємося</h2>
           <ul class="list our-work__list">
             <li class="item our-work__item">
-              <img class="our-work__img" src="./images/work1.jpg" width="370" alt="Проектування" />
+              <img
+                class="our-work__img"
+                srcset="./images/work/img-1.jpg 1x, ./images/work/img-1@2x.jpg 2x"
+                src="./images/work/img-1.jpg"
+                width="370"
+                alt="Проектування"
+              />
               <p class="our-work__desc">Десктопні додатки</p>
             </li>
             <li class="item our-work__item">
-              <img class="our-work__img" src="./images/work2.jpg" width="370" alt="Адаптація" />
+              <img
+                class="our-work__img"
+                srcset="./images/work/img-2.jpg 1x, ./images/work/img-2@2x.jpg 2x"
+                src="./images/work/img-2.jpg"
+                width="370"
+                alt="Адаптація"
+              />
               <p class="our-work__desc">Мобільні додатки</p>
             </li>
             <li class="item our-work__item">
-              <img class="our-work__img" src="./images/work3.jpg" width="370" alt="Дізайн" />
+              <img
+                class="our-work__img"
+                srcset="./images/work/img-3.jpg 1x, ./images/work/img-3@2x.jpg 2x"
+                src="./images/work/img-3.jpg"
+                width="370"
+                alt="Дізайн"
+              />
               <p class="our-work__desc">Дизайнерські рішення</p>
             </li>
           </ul>
@@ -195,8 +194,16 @@
             <li class="item our-team__item">
               <img
                 class="our-team__member-photo"
-                src="./images/product-designer.jpg"
-                width="270"
+                srcset="
+                  ./images/team/img-1-270.jpg 270w,
+                  ./images/team/img-1-354.jpg 354w,
+                  ./images/team/img-1-450.jpg 450w,
+                  ./images/team/img-1-540.jpg 540w,
+                  ./images/team/img-1-708.jpg 708w,
+                  ./images/team/img-1-900.jpg 900w
+                "
+                src="./images/team/img-1-270.jpg"
+                sizes="(min-width: 1200px) 25vw,(min-width: 768px) 50vw, 100vw"
                 alt="Дизайнер проекта"
               />
               <div class="our-team__description-wrap">
@@ -254,8 +261,16 @@
             <li class="item our-team__item">
               <img
                 class="our-team__member-photo"
-                src="./images/frontend-developer.jpg"
-                width="270"
+                srcset="
+                  ./images/team/img-2-270.jpg 270w,
+                  ./images/team/img-2-354.jpg 354w,
+                  ./images/team/img-2-450.jpg 450w,
+                  ./images/team/img-2-540.jpg 540w,
+                  ./images/team/img-2-708.jpg 708w,
+                  ./images/team/img-2-900.jpg 900w
+                "
+                src="./images/team/img-2-270.jpg"
+                sizes="(min-width: 1200px) 25vw,(min-width: 768px) 50vw, 100vw"
                 alt="Фронтенд разработчик"
               />
               <div class="our-team__description-wrap">
@@ -313,8 +328,16 @@
             <li class="item our-team__item">
               <img
                 class="our-team__member-photo"
-                src="./images/marketing.jpg"
-                width="270"
+                srcset="
+                  ./images/team/img-3-270.jpg 270w,
+                  ./images/team/img-3-354.jpg 354w,
+                  ./images/team/img-3-450.jpg 450w,
+                  ./images/team/img-3-540.jpg 540w,
+                  ./images/team/img-3-708.jpg 708w,
+                  ./images/team/img-3-900.jpg 900w
+                "
+                src="./images/team/img-3-270.jpg"
+                sizes="(min-width: 1200px) 25vw,(min-width: 768px) 50vw, 100vw"
                 alt="Маркетінг"
               />
 
@@ -373,8 +396,16 @@
             <li class="item our-team__item">
               <img
                 class="our-team__member-photo"
-                src="./images/ui-designer.jpg"
-                width="270"
+                srcset="
+                  ./images/team/img-4-270.jpg 270w,
+                  ./images/team/img-4-354.jpg 354w,
+                  ./images/team/img-4-450.jpg 450w,
+                  ./images/team/img-4-540.jpg 540w,
+                  ./images/team/img-4-708.jpg 708w,
+                  ./images/team/img-4-900.jpg 900w
+                "
+                src="./images/team/img-4-270.jpg"
+                sizes="(min-width: 1200px) 25vw,(min-width: 768px) 50vw, 100vw"
                 alt="UI дезайнер"
               />
               <div class="our-team__description-wrap">

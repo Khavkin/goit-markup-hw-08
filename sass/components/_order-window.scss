@@ -3,8 +3,19 @@
 .order-window {
   position: absolute;
 
-  width: 528px;
-  height: 581px;
+  width: 450px;
+  height: 609px;
+
+  //
+
+  @media screen and (max-width: ($mobile - 1)) {
+    width: 320px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 528px;
+    height: 581px;
+  }
 
   padding: 40px;
 

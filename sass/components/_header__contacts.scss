@@ -1,9 +1,25 @@
 @import '../utils/variables';
 
 .header__contacts {
-  //margin-left: auto;
-  // display: flex;
-  // gap: 50px;
+  display: flex;
+  gap: 32px;
+  flex-direction: column-reverse;
+
+  @media screen and (max-width: ($tablet - 1)) {
+    margin-top: auto;
+    margin-bottom: 64px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    margin-left: auto;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    flex-direction: row;
+    gap: 30px;
+  }
 
   &-link {
     display: flex;
@@ -14,9 +30,35 @@
     font-weight: 500;
     line-height: 1.2;
     letter-spacing: 0.02em;
+    white-space: nowrap;
     color: $contact-color; //var(--contact-color);
     transition: $transition; //var(--transition);
     transition-property: color;
+  }
+
+  &-link[href*='mailto'] {
+    @media screen and (max-width: 349px) {
+      font-size: 24px;
+      line-height: 1.17;
+    }
+    @media screen and (min-width: 350px) and (max-width: ($tablet - 1)) {
+      font-size: 28px;
+      line-height: 1.17;
+    }
+  }
+
+  &-link[href*='tel'] {
+    @media screen and (max-width: 349px) {
+      font-size: 30px;
+      line-height: 1.17;
+      color: $accent-color;
+    }
+
+    @media screen and (min-width: 350px) and (max-width: ($tablet - 1)) {
+      font-size: 34px;
+      line-height: 1.17;
+      color: $accent-color;
+    }
   }
 
   &-link:hover,
@@ -25,10 +67,31 @@
   }
 
   &-icon {
-    margin-right: 10px;
-    fill: $contact-color; //var(--contact-color);
-    transition: $transition; //var(--transition);
-    transition-property: fill;
+    display: none;
+    @media screen and (min-width: $tablet) {
+      display: block;
+      margin-right: 8px; // 10px;
+      fill: $contact-color; //var(--contact-color);
+      transition: $transition; //var(--transition);
+      transition-property: fill;
+    }
+
+    @media screen and (min-width: $desktop) {
+      margin-right: 10px;
+    }
+  }
+
+  .envelope-icon {
+    @media screen and (min-width: $desktop) {
+      width: 16px;
+      height: 12px;
+    }
+  }
+
+  .mobile-icon {
+    @media screen and (min-width: $desktop) {
+      height: 16px;
+    }
   }
 
   &-link:hover &-icon,

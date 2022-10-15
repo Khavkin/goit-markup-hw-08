@@ -85,8 +85,13 @@
     align-items: center;
     gap: 7px;
 
-    font-size: 14px;
-    line-height: 1.7;
+    font-size: 12px;
+    line-height: 1.17;
+
+    @media screen and (min-width: $desktop) {
+      font-size: 14px;
+      line-height: 1.7;
+    }
 
     letter-spacing: 0.03em;
   }
@@ -119,7 +124,10 @@
     background-color: $accent-color;
     position: absolute;
     left: 0;
-    bottom: 3px;
+    bottom: -1px;
+    @media screen and (min-width: $desktop) {
+      bottom: 3px;
+    }
   }
 
   &__btn-submit {

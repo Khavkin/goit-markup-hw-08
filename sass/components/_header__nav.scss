@@ -1,5 +1,12 @@
 @import '../utils/variables';
 .header__nav {
+  @media screen and (min-width: $tablet) {
+    margin-left: 88px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-left: 93px;
+  }
+
   &-item {
     font-size: 14px;
     font-weight: 500;
@@ -30,6 +37,10 @@
 
   &-link {
     color: $title-color; //var(--title-color);
+    @media screen and (min-width: $tablet) {
+      position: relative;
+      padding: 32px 0;
+    }
   }
 
   &-link--current,

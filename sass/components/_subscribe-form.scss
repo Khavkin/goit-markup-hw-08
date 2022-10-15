@@ -1,12 +1,6 @@
 @import '../utils/variables';
 
 .subscribe-form {
-  //width: 570px;
-  // height: 86px;
-
-  // text-align: center;
-
-  // position: relative;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -36,8 +30,16 @@
   }
 
   &__input {
-    width: 358px;
-    padding: 14px 16px;
+    width: 100%;
+    min-width: 320px;
+    @media screen and (min-width: $tablet) {
+      width: 450px;
+    }
+    @media screen and (min-width: $desktop) {
+      width: 358px;
+    }
+
+    padding: 15px 16px;
 
     //position: absolute;
     //left: 0;

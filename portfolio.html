@@ -23,38 +23,66 @@
   <body>
     <header class="header">
       <div class="container header__container">
-        <nav class="header__nav">
-          <a class="logo link" href="./index.html"><span class="logo__accent">Web</span>Studio</a>
-          <ul class="header__nav-links list">
+        <a class="logo link" href="./index.html"><span class="logo__accent">Web</span>Studio</a>
+        <button class="menu-button js-open-menu" type="button">
+          <svg class="menu-icon" width="24" height="16">
+            <use href="images/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
+        <div class="menu-container js-menu-container">
+          <button class="btn-close-menu js-close-menu" type="button">
+            <svg class="menu-icon" width="19" height="19">
+              <use href="images/icons.svg#icon-close-menu"></use>
+            </svg>
+          </button>
+          <nav class="header__nav">
+            <ul class="header__nav-links list">
+              <li class="header__nav-item">
+                <a class="header__nav-link link" href="./index.html">Студія</a>
+              </li>
+              <li class="header__nav-item">
+                <a class="header__nav-link link header__nav-link--current" href="./portfolio.html"
+                  >Портфоліо</a
+                >
+              </li>
+              <li class="header__nav-item">
+                <a class="header__nav-link link" href="">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="header__contacts">
             <li>
-              <a class="header__nav-item link" href="./index.html">Студія</a>
-            </li>
-            <li>
-              <a class="header__nav-item link header__nav-item--current" href="./portfolio.html"
-                >Портфоліо</a
+              <a class="header__contacts-link link" href="mailto:info@devstudio.com">
+                <svg class="header__contacts-icon envelope-icon" width="14" height="10">
+                  <use href="./images/icons.svg#icon-envelope"></use>
+                </svg>
+                info@devstudio.com</a
               >
             </li>
-            <li><a class="header__nav-item link" href="">Контакти</a></li>
+            <li>
+              <a class="header__contacts-link link" href="tel:+380961111111">
+                <svg class="header__contacts-icon mobile-icon" width="10" height="14">
+                  <use href="./images/icons.svg#icon-smartphone"></use>
+                </svg>
+                +38 096 111 11 11</a
+              >
+            </li>
           </ul>
-        </nav>
-        <ul class="header__contacts">
-          <li>
-            <a class="header__contacts-link link" href="mailto:info@devstudio.com">
-              <svg class="header__contacts-icon" width="16" height="12">
-                <use href="./images/icons.svg#icon-envelope"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li>
-            <a class="header__contacts-link link" href="tel:+380961111111">
-              <svg class="header__contacts-icon" width="10" height="16">
-                <use href="./images/icons.svg#icon-smartphone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+          <ul class="header__social list">
+            <li class="header__social-item">
+              <a class="header__social-link link" href="" aria-label="instagram"> instagram </a>
+            </li>
+            <li class="header__social-item">
+              <a class="header__social-link link" href="" aria-label="Twitter"> Twitter </a>
+            </li>
+            <li class="header__social-item">
+              <a class="header__social-link link" href="" aria-label="Facebook"> Facebook </a>
+            </li>
+            <li class="header__social-item">
+              <a class="header__social-link link" href="" aria-label="Linkedin"> Linkedin </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
     <main>
@@ -86,9 +114,17 @@
                 <div class="card__overlay-wrap">
                   <img
                     class="card__image"
-                    src="./images/portfolio/img-1.jpg"
+                    srcset="
+                      ./images/portfolio/img-1-354.jpg 354w,
+                      ./images/portfolio/img-1-370.jpg 370w,
+                      ./images/portfolio/img-1-450.jpg 450w,
+                      ./images/portfolio/img-1-708.jpg 708w,
+                      ./images/portfolio/img-1-740.jpg 740w,
+                      ./images/portfolio/img-1-900.jpg 900w
+                    "
+                    src="./images/portfolio/img-1-354.jpg"
+                    sizes="(min-width: 1200px) 33vw,(min-width: 768px) 50vw, 100vw"
                     alt="Приклад роботи"
-                    width="370"
                   />
                   <p class="card__overlay">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -107,9 +143,17 @@
                 <div class="card__overlay-wrap">
                   <img
                     class="card__image"
-                    src="./images/portfolio/img-2.jpg"
+                    srcset="
+                      ./images/portfolio/img-2-354.jpg 354w,
+                      ./images/portfolio/img-2-370.jpg 370w,
+                      ./images/portfolio/img-2-450.jpg 450w,
+                      ./images/portfolio/img-2-708.jpg 708w,
+                      ./images/portfolio/img-2-740.jpg 740w,
+                      ./images/portfolio/img-2-900.jpg 900w
+                    "
+                    src="./images/portfolio/img-2-354.jpg"
+                    sizes="(min-width: 1200px) 33vw,(min-width: 768px) 50vw, 100vw"
                     alt="Приклад роботи"
-                    width="370"
                   />
                   <p class="card__overlay">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -128,9 +172,17 @@
                 <div class="card__overlay-wrap">
                   <img
                     class="card__image"
-                    src="./images/portfolio/img-3.jpg"
+                    srcset="
+                      ./images/portfolio/img-3-354.jpg 354w,
+                      ./images/portfolio/img-3-370.jpg 370w,
+                      ./images/portfolio/img-3-450.jpg 450w,
+                      ./images/portfolio/img-3-708.jpg 708w,
+                      ./images/portfolio/img-3-740.jpg 740w,
+                      ./images/portfolio/img-3-900.jpg 900w
+                    "
+                    src="./images/portfolio/img-3-354.jpg"
+                    sizes="(min-width: 1200px) 33vw,(min-width: 768px) 50vw, 100vw"
                     alt="Приклад роботи"
-                    width="370"
                   />
                   <p class="card__overlay">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -149,9 +201,17 @@
                 <div class="card__overlay-wrap">
                   <img
                     class="card__image"
-                    src="./images/portfolio/img-4.jpg"
+                    srcset="
+                      ./images/portfolio/img-4-354.jpg 354w,
+                      ./images/portfolio/img-4-370.jpg 370w,
+                      ./images/portfolio/img-4-450.jpg 450w,
+                      ./images/portfolio/img-4-708.jpg 708w,
+                      ./images/portfolio/img-4-740.jpg 740w,
+                      ./images/portfolio/img-4-900.jpg 900w
+                    "
+                    src="./images/portfolio/img-4-354.jpg"
+                    sizes="(min-width: 1200px) 33vw,(min-width: 768px) 50vw, 100vw"
                     alt="Приклад роботи"
-                    width="370"
                   />
                   <p class="card__overlay">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -169,10 +229,17 @@
               <a class="link card__link" href="">
                 <div class="card__overlay-wrap">
                   <img
-                    class="card__image"
-                    src="./images/portfolio/img-5.jpg"
+                    srcset="
+                      ./images/portfolio/img-5-354.jpg 354w,
+                      ./images/portfolio/img-5-370.jpg 370w,
+                      ./images/portfolio/img-5-450.jpg 450w,
+                      ./images/portfolio/img-5-708.jpg 708w,
+                      ./images/portfolio/img-5-740.jpg 740w,
+                      ./images/portfolio/img-5-900.jpg 900w
+                    "
+                    src="./images/portfolio/img-5-354.jpg"
+                    sizes="(min-width: 1200px) 33vw,(min-width: 768px) 50vw, 100vw"
                     alt="Приклад роботи"
-                    width="370"
                   />
                   <p class="card__overlay">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -191,9 +258,17 @@
                 <div class="card__overlay-wrap">
                   <img
                     class="card__image"
-                    src="./images/portfolio/img-6.jpg"
+                    srcset="
+                      ./images/portfolio/img-6-354.jpg 354w,
+                      ./images/portfolio/img-6-370.jpg 370w,
+                      ./images/portfolio/img-6-450.jpg 450w,
+                      ./images/portfolio/img-6-708.jpg 708w,
+                      ./images/portfolio/img-6-740.jpg 740w,
+                      ./images/portfolio/img-6-900.jpg 900w
+                    "
+                    src="./images/portfolio/img-6-354.jpg"
+                    sizes="(min-width: 1200px) 33vw,(min-width: 768px) 50vw, 100vw"
                     alt="Приклад роботи"
-                    width="370"
                   />
                   <p class="card__overlay">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -212,9 +287,17 @@
                 <div class="card__overlay-wrap">
                   <img
                     class="card__image"
-                    src="./images/portfolio/img-7.jpg"
+                    srcset="
+                      ./images/portfolio/img-7-354.jpg 354w,
+                      ./images/portfolio/img-7-370.jpg 370w,
+                      ./images/portfolio/img-7-450.jpg 450w,
+                      ./images/portfolio/img-7-708.jpg 708w,
+                      ./images/portfolio/img-7-740.jpg 740w,
+                      ./images/portfolio/img-7-900.jpg 900w
+                    "
+                    src="./images/portfolio/img-7-354.jpg"
+                    sizes="(min-width: 1200px) 33vw,(min-width: 768px) 50vw, 100vw"
                     alt="Приклад роботи"
-                    width="370"
                   />
                   <p class="card__overlay">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -233,9 +316,17 @@
                 <div class="card__overlay-wrap">
                   <img
                     class="card__image"
-                    src="./images/portfolio/img-8.jpg"
+                    srcset="
+                      ./images/portfolio/img-8-354.jpg 354w,
+                      ./images/portfolio/img-8-370.jpg 370w,
+                      ./images/portfolio/img-8-450.jpg 450w,
+                      ./images/portfolio/img-8-708.jpg 708w,
+                      ./images/portfolio/img-8-740.jpg 740w,
+                      ./images/portfolio/img-8-900.jpg 900w
+                    "
+                    src="./images/portfolio/img-8-354.jpg"
+                    sizes="(min-width: 1200px) 33vw,(min-width: 768px) 50vw, 100vw"
                     alt="Приклад роботи"
-                    width="370"
                   />
                   <p class="card__overlay">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -254,9 +345,17 @@
                 <div class="card__overlay-wrap">
                   <img
                     class="card__image"
-                    src="./images/portfolio/img-9.jpg"
+                    srcset="
+                      ./images/portfolio/img-9-354.jpg 354w,
+                      ./images/portfolio/img-9-370.jpg 370w,
+                      ./images/portfolio/img-9-450.jpg 450w,
+                      ./images/portfolio/img-9-708.jpg 708w,
+                      ./images/portfolio/img-9-740.jpg 740w,
+                      ./images/portfolio/img-9-900.jpg 900w
+                    "
+                    src="./images/portfolio/img-9-354.jpg"
+                    sizes="(min-width: 1200px) 33vw,(min-width: 768px) 50vw, 100vw"
                     alt="Приклад роботи"
-                    width="370"
                   />
                   <p class="card__overlay">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.

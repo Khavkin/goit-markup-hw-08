@@ -84,6 +84,10 @@
   }
 
   &__form-wrap {
+    @media screen and (max-width: ($tablet - 1)) {
+      width: 100%;
+    }
+
     @media screen and (min-width: $desktop) {
       margin-left: auto;
     }
