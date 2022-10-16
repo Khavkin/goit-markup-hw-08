@@ -2,12 +2,13 @@
 
 .card {
   width: 100%;
-  min-width: 320px;
+  // min-width: 290px;
 
   display: flex;
   align-content: stretch;
 
   @media screen and (max-width: ($tablet - 1)) {
+    max-width: 450px;
     &:not(:last-child) {
       margin-bottom: 30px;
     }
