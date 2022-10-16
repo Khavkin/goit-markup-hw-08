@@ -1,66 +1,66 @@
 @import '../utils/variables';
 @import '../utils/mixins';
 
-.hero {
-  max-width: 1600px;
-  height: 400px;
-  padding: 118px 0;
-  margin: auto;
-  background-color: #c4c4c4;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+// .hero {
+//   max-width: 1600px;
+//   height: 400px;
+//   padding: 118px 0;
+//   margin: auto;
+//   background-color: #c4c4c4;
+//   background-repeat: no-repeat;
+//   background-position: center;
+//   background-size: cover;
 
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url(../images/hero/hero-480.jpg);
-}
+//   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+//     url(../images/hero/hero-480.jpg);
+// }
 
-@media (min-device-pixel-ratio: 2),
-  (-webkit-min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx) {
-  .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      url(../images/hero/hero-480x2.jpg);
-  }
-}
+// @media (min-device-pixel-ratio: 2),
+//   (-webkit-min-device-pixel-ratio: 2),
+//   (min-resolution: 192dpi),
+//   (min-resolution: 2dppx) {
+//   .hero {
+//     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+//       url(../images/hero/hero-480x2.jpg);
+//   }
+// }
 
-@media screen and (min-width: 480px) {
-  .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      url(../images/hero/hero-768.jpg);
-  }
-}
+// @media screen and (min-width: 480px) {
+//   .hero {
+//     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+//       url(../images/hero/hero-768.jpg);
+//   }
+// }
 
-@media screen and (min-width: 480px) and (min-device-pixel-ratio: 2),
-  screen and (min-width: 480px) and (-webkit-min-device-pixel-ratio: 2),
-  screen and (min-width: 480px) and (min-resolution: 192dpi),
-  screen and (min-width: 480px) and (min-resolution: 2dppx) {
-  .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      url(../images/hero/hero-768x2.jpg);
-  }
-}
+// @media screen and (min-width: 480px) and (min-device-pixel-ratio: 2),
+//   screen and (min-width: 480px) and (-webkit-min-device-pixel-ratio: 2),
+//   screen and (min-width: 480px) and (min-resolution: 192dpi),
+//   screen and (min-width: 480px) and (min-resolution: 2dppx) {
+//   .hero {
+//     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+//       url(../images/hero/hero-768x2.jpg);
+//   }
+// }
 
-@media screen and (min-width: 768px) {
-  .hero {
-    height: 600px;
-    padding: 200px 0;
+// @media screen and (min-width: 768px) {
+//   .hero {
+//     height: 600px;
+//     padding: 200px 0;
 
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      url(../images/hero/hero-1600.jpg);
-  }
-}
+//     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+//       url(../images/hero/hero-1600.jpg);
+//   }
+// }
 
-@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2),
-  screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2),
-  screen and (min-width: 768px) and (min-resolution: 192dpi),
-  screen and (min-width: 768px) and (min-resolution: 2dppx) {
-  .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      url(../images/hero/hero-1600x2.jpg);
-  }
-}
+// @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2),
+//   screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2),
+//   screen and (min-width: 768px) and (min-resolution: 192dpi),
+//   screen and (min-width: 768px) and (min-resolution: 2dppx) {
+//   .hero {
+//     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+//       url(../images/hero/hero-1600x2.jpg);
+//   }
+// }
 
 .hero {
   text-align: center;
@@ -72,54 +72,54 @@
   background-size: cover;
   background-repeat: no-repeat;
 
-  // background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-  //   url(../images/hero/hero-480.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero/hero-480.jpg);
 
-  // @include retina {
-  //   background-position: center;
-  //   background-size: cover;
-  //   background-repeat: no-repeat;
+  @include retina {
+    // background-position: center;
+    // background-size: cover;
+    // background-repeat: no-repeat;
 
-  //   background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-  //     url(../images/hero/hero-480x2.jpg);
-  // }
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero/hero-480x2.jpg);
+  }
 
-  // @media screen and (min-width: ($mobile + 1)) {
-  //   //от мобильной до таблета
-  //   background-color: $footer-background-color; //var(--footer-background-color);
-  //   background-position: center;
-  //   background-size: cover;
-  //   background-repeat: no-repeat;
+  @media screen and (min-width: ($mobile + 1)) {
+    //от мобильной до таблета
+    // background-color: $footer-background-color; //var(--footer-background-color);
+    // background-position: center;
+    // background-size: cover;
+    // background-repeat: no-repeat;
 
-  //   background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-  //     url(../images/hero/hero-768.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero/hero-768.jpg);
 
-  //   @include retina {
-  //     background-position: center;
-  //     background-size: cover;
-  //     background-repeat: no-repeat;
-  //     background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-  //       url(../images/hero/hero-768x2.jpg);
-  //   }
-  // }
+    @include retina {
+      // background-position: center;
+      // background-size: cover;
+      // background-repeat: no-repeat;
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/hero/hero-768x2.jpg);
+    }
+  }
 
-  // @media screen and (min-width: ($tablet + 1)) {
-  //   //от таблета и дальше
-  //   //height: 600px;
+  @media screen and (min-width: ($tablet + 1)) {
+    //от таблета и дальше
+    //height: 600px;
 
-  //   background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-  //     url(../images/hero/hero-1600.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero/hero-1600.jpg);
 
-  //   @include retina {
-  //     background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-  //       url(../images/hero/hero-1600x2.jpg);
-  //   }
+    @include retina {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/hero/hero-1600x2.jpg);
+    }
 
-  //   background-color: $footer-background-color; //var(--footer-background-color);
-  //   background-position: center;
-  //   background-size: cover;
-  //   background-repeat: no-repeat;
-  // }
+    // background-color: $footer-background-color; //var(--footer-background-color);
+    // background-position: center;
+    // background-size: cover;
+    // background-repeat: no-repeat;
+  }
 
   @include desktop {
     height: 600px;
